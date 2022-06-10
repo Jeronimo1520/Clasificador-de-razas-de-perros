@@ -35,7 +35,11 @@ window.addEventListener("resize", function(){
     if (window.innerWidth < 760){
         body.classList.add("body_move");
         side_menu.classList.add("menu_move");
+        body.classList.add("imagen_video_move");
     }
+
+   
+
 })
 
 

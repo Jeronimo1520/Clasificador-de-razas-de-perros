@@ -23,7 +23,7 @@ main{
 
 header {
     width: 100%;
-    height: 90px;
+    min-height: 70px;
     background:  white;
     display: flex;
     align-items: center;
@@ -50,7 +50,7 @@ header {
 .menu{
     width: 80px;
     height: 100%;
-    background: aqua;
+    background: #FF8000;
     position: fixed;
     top: 0;
     left: 0;
@@ -59,7 +59,7 @@ header {
     z-index: 300;
     overflow: hidden;
     overflow-y: scroll;
-    border-right: 22px solid aqua;
+    border-right: 22px solid #FF8000;
     transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
 }
@@ -73,18 +73,20 @@ header {
 }
 
 .imagen_video{
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
 }
 .nombre_pagina{
     padding: 20px 30px;
     display: flex;
     align-items: center;
     margin-top: 10px;
+    cursor: default;
 }
 .nombre_pagina i{
     width: 20px;
     margin-right: 10px;
+    cursor: default;
 }
 
 .icono_info i{
@@ -98,7 +100,7 @@ header {
     top: 80px
 }
 .opciones_Menu a{
-    color:darkslategrey;
+    color: black;
     cursor:default;
     display: block;
     position: relative;
@@ -139,9 +141,10 @@ a.seleccionado{
 }
 
 .logo{
-    width: 80px;
+    width: 100%;
     height: 80px;
     transform: translateX(1110px);
+    display: flex;
     
 }
 
@@ -224,11 +227,30 @@ a.seleccionado{
     
 }
 
+
 .titulo_consejos{
     text-align: center;
-    transform: translateX(400px);
+    margin-left: 450px;
 }
 
+.Lista_razas a{
+    position: relative;
+    color: black;
+}
+
+.btn-btn-primary-mb-2{
+    transform: translateX(-10px);
+    width: 100px;
+    height: 50px;
+    
+    cursor: pointer;
+    position: flex;  
+    visibility: hidden;
+}
+
+.resultado {
+    transform: translateY(20%);
+}
 /* clases para usar en los eventos de js*/
 
 .body_move{
@@ -240,8 +262,12 @@ a.seleccionado{
     width: 250px;
 }
 
+.imagen_video_move{
+    width: 80%; 
+}
+
 /*Adaptar a otros dispositivos*/
-@media screen and (max-width: 760px){
+@media screen and (max-width: 800px){
     .body_move{
         margin-left: 0px;
     }
@@ -250,8 +276,31 @@ a.seleccionado{
         width: 80px;
         left: -80px;
     }
-
+   
     .icono_menu{
         transform: translateX(10px);
     }
+
+    .btn-btn-primary-mb-2{
+        visibility: visible;
+    }
+    
+    header{
+        transform: translateX(-10px);
+    }
+
+    .logo{
+        
+        display: none;
+    }
+
+    .titulo_consejos{
+        margin-left: -10px;
+    }
+    
+    .resultado{
+        font-size: 20px;
+    }
+   
 }
+
